@@ -1,0 +1,30 @@
+{
+  "name": "count-promises",
+  "version": "1.0.0",
+  "description": "Count all the promises created between two execution points.",
+  "main": "count-promises.js",
+  "types": "count-promises.d.ts",
+  "type": "commonjs",
+  "scripts": {
+    "test": "standard && node --test",
+    "types": "tsc count-promises.js --declaration --allowJs --emitDeclarationOnly"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bengl/count-promises.git"
+  },
+  "keywords": [
+    "promises",
+    "count"
+  ],
+  "author": "Bryan English <bryan@bryanenglish.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bengl/count-promises/issues"
+  },
+  "homepage": "https://github.com/bengl/count-promises#readme",
+  "devDependencies": {
+    "standard": "^17.1.0",
+    "typescript": "^5.2.2"
+  }
+}
