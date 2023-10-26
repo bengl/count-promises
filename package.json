@@ -1,6 +1,6 @@
 {
   "name": "count-promises",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Count all the promises created between two execution points.",
   "main": "count-promises.js",
   "types": "count-promises.d.ts",
