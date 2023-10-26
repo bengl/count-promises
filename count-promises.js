@@ -5,9 +5,11 @@ let storage
 
 function getLocation () {
   const stack = new Error().stack.split('\n')
-  let stackIndex = 3
+  let stackIndex = 2
   let line = stack[stackIndex]
-  while (line?.endsWith('<anonymous>)')) {
+  while (line && (line.includes(__filename)
+    || line.includes('node:internal/promise_hooks')
+    || line?.endsWith('<anonymous>)'))) {
     line = stack[++stackIndex]
   }
   return (line || stack.pop()).substring(7)

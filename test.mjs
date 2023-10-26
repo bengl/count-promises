@@ -63,6 +63,12 @@ await 1 // clears out the Module.run promise
   assert.strictEqual(stop(), 2)
 }
 
+{ // regression test for https://github.com/bengl/count-promises/issues/1
+  const stop = startCounter({ continuation: true, locations: true })
+  await fetch('http://example.com')
+  assert.ok(Object.keys(stop()).length > 10)
+}
+
 // Hello there! You might be wondering why I didn't use Node.js built-in test
 // framework. The reason is that the test framework adds a bunch of promises
 // everywhere, polluting these tests.
